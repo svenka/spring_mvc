@@ -29,9 +29,11 @@ Department
 <br>
 <br>
 Which car do you want?
-BMW<form:radiobutton path="carBrand" value="BMW"/>
-Audi<form:radiobutton path="carBrand" value="Audi"/>
-MB<form:radiobutton path="carBrand" value="Mercedes-Benz"/>
+<!--BMW<form:radiobutton path="carBrand" value="BMW"/>-->
+<!--Audi<form:radiobutton path="carBrand" value="Audi"/>-->
+<!--MB<form:radiobutton path="carBrand" value="Mercedes-Benz"/>-->
+
+<form:radiobuttons path="carBrand" items="${employee.carbrands}"/>
 <br>
 <br>
 <input type="submit" value="OK">

@@ -36,6 +36,13 @@ Which car do you want?
 <form:radiobuttons path="carBrand" items="${employee.carbrands}"/>
 <br>
 <br>
+Foreign Language(s)
+EN <form:checkbox path="languages" value="English"/>
+DE <form:checkbox path="languages" value="Deutsch"/>
+FR <form:checkbox path="languages" value="French"/>
+
+<br>
+<br>
 <input type="submit" value="OK">
 </form:form>
 </body>

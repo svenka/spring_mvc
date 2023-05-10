@@ -13,6 +13,7 @@ public class Employee {
 
     private  String carBrand;
     private Map<String,String> carbrands;
+    private String[] languages;
 
     public Employee() {
     departments=new HashMap<>();
@@ -91,5 +92,13 @@ public class Employee {
 
     public void setCarbrands(Map<String, String> carbrands) {
         this.carbrands = carbrands;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
     }
 }

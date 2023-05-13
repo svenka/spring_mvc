@@ -1,6 +1,7 @@
 package com.fyodork.spring.mvc;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Employee {
@@ -14,6 +15,7 @@ public class Employee {
     private  String carBrand;
     private Map<String,String> carbrands;
     private String[] languages;
+    private Map<String,String> languagesList;
 
     public Employee() {
     departments=new HashMap<>();
@@ -25,6 +27,11 @@ public class Employee {
     carbrands.put("BMW","BMW");
     carbrands.put("Audi","Audi");
     carbrands.put("Mercedes-Benz","MB");
+
+    languagesList=new LinkedHashMap<>();
+    languagesList.put("English","EN");
+    languagesList.put("Deutsch","DE");
+    languagesList.put("French","FR");
 
     }
 
@@ -100,5 +107,13 @@ public class Employee {
 
     public void setLanguages(String[] languages) {
         this.languages = languages;
+    }
+
+    public Map<String, String> getLanguagesList() {
+        return languagesList;
+    }
+
+    public void setLanguagesList(Map<String, String> languagesList) {
+        this.languagesList = languagesList;
     }
 }

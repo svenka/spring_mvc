@@ -37,9 +37,10 @@ Which car do you want?
 <br>
 <br>
 Foreign Language(s)
-EN <form:checkbox path="languages" value="English"/>
-DE <form:checkbox path="languages" value="Deutsch"/>
-FR <form:checkbox path="languages" value="French"/>
+<!--EN <form:checkbox path="languages" value="English"/>-->
+<!--DE <form:checkbox path="languages" value="Deutsch"/>-->
+<!--FR <form:checkbox path="languages" value="French"/>-->
+<form:checkboxes path="languages" items="${employee.languagesList}"/>
 
 <br>
 <br>

@@ -1,9 +1,6 @@
 package com.fyodork.spring.mvc;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,6 +11,8 @@ public class Employee {
     private String name;
     @NotBlank(message = "surname is required field")
     private String surname;
+    @Min(value = 500,message = "Salary must be greater than 499")
+    @Max(value = 1000,message = "Salary must be less than 1001")
     private int salary;
     private String department;
     private Map<String,String> departments;
@@ -22,6 +21,8 @@ public class Employee {
     private Map<String,String> carbrands;
     private String[] languages;
     private Map<String,String> languagesList;
+    @Pattern(regexp = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$",message = "Пожалуйста используй шаблон +7-123-456-78-90")
+    private String phoneNumber;
 
     public Employee() {
     departments=new HashMap<>();
@@ -121,5 +122,13 @@ public class Employee {
 
     public void setLanguagesList(Map<String, String> languagesList) {
         this.languagesList = languagesList;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

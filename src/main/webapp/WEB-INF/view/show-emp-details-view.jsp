@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <DOCTYPE html>
 <html>
 <body>
@@ -25,5 +26,6 @@ Languages:
 
 </c:forEach>
 </ul>
+Phone number:${employee.phoneNumber}
 </body>
 </html>

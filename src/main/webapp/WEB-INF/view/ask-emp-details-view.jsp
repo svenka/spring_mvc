@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <DOCTYPE html>
 <html>
 <body>
@@ -19,6 +20,7 @@ Surname <form:input path="surname"/>
 <br>
 <br>
 Salary <form:input path="salary" />
+<form:errors path="salary"/>
 <br>
 <br>
 Department
@@ -43,7 +45,10 @@ Foreign Language(s)
 <!--DE <form:checkbox path="languages" value="Deutsch"/>-->
 <!--FR <form:checkbox path="languages" value="French"/>-->
 <form:checkboxes path="languages" items="${employee.languagesList}"/>
-
+<br>
+<br>
+PhoneNumber <form:input path="phoneNumber"/>
+<form:errors path="phoneNumber"/>
 <br>
 <br>
 <input type="submit" value="OK">

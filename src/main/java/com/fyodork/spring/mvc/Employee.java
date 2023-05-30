@@ -1,5 +1,7 @@
 package com.fyodork.spring.mvc;
 
+import com.fyodork.spring.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -23,6 +25,9 @@ public class Employee {
     private Map<String,String> languagesList;
     @Pattern(regexp = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$",message = "Пожалуйста используй шаблон +7-123-456-78-90")
     private String phoneNumber;
+    @CheckEmail(value = "@abc.com",message = "email must ends with abc.com")
+    //@CheckEmail
+    private String email;
 
     public Employee() {
     departments=new HashMap<>();
@@ -130,5 +135,13 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

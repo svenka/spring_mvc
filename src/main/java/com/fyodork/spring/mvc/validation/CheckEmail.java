@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 public @interface CheckEmail {
 
     public String value() default "@xyz.com";
-    public String message() default "email must ends with @xyz.com";
+    public String message() default "email must ends with @xyz.com,@qwe.com";
 
     public Class <?>[] groups() default {};
     public Class<? extends Payload> [] payload() default {};
